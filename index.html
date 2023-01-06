@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav class="top-nav">
-            <div id="logo"><img src="./assets/images/logo.png"></div>
+            <div id="logo-div"><img id="logo" src="./assets/images/logo.png"></div>
             <ul class="nav-links">
                 <li><a href="##" aria-label="Toggle the music on or off" id="toggle-music">toggle music</a></li>
                 <li><a href="##" aria-label="View the instructions for the game" id="view-instructions">instuctions</a></li>
@@ -29,25 +29,34 @@
             <p>prawns missed: <span id="missed">0</span></p>
         </div>
         <div id="holes-container">
-            <div class="mole-hole" id="hole-1"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-2"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-3"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-4"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-5"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-6"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-7"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-8"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
-            <div class="mole-hole" id="hole-9"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+            <div class="flex-grid">
+                <div class="col">
+                    <div class="mole-area" id="hole-1"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                    <div class="mole-area" id="hole-2"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                    <div class="mole-area" id="hole-3"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                </div>
+                <div class="col">
+                    <div class="mole-area" id="hole-4"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                    <div class="mole-area" id="hole-5"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                    <div class="mole-area" id="hole-6"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                </div>
+                <div class="col">
+                    <div class="mole-area" id="hole-7"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                    <div class="mole-area" id="hole-8"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                    <div class="mole-area" id="hole-9"><img src="./assets/images/empty-hole.png" alt="empty mole hole"></div>
+                </div>
+            </div>
         </div>
 
     </section>
     
     <footer>
-        <p>Developed by Holly Bailey for Code Institute's second milestone project in 2023.</p>
-         <div id="social-icons">
-            <a href="https://www.github.com/h-bails" target="_blank" aria-label="Visit Holly's GitHub profile (opens in a new tab)"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/hollyannebailey" target="_blank" aria-label="Visit Holly's LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
-         </div>
+        <div class="footer-wrapper"><p>Developed by Holly Bailey for Code Institute's second milestone project in 2023.</p>
+            <div id="social-icons">
+                <a href="https://www.github.com/h-bails" target="_blank" aria-label="Visit Holly's GitHub profile (opens in a new tab)"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/hollyannebailey" target="_blank" aria-label="Visit Holly's LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/fa8227c231.js" crossorigin="anonymous"></script>

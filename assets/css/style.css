@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Roboto+Mono&family=Seymour+One&display=swap');
+
+/* global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+  }
+
+body {
+    font-family: "Mulish", sans-serif;
+    margin: 0;
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+    background-size: 105%;
+    background-position: top;
+}
+
+h1 {
+    font-family: "Mulish", serif;
+    font-size: 2rem;
+}
+
+/*top navigation section */
+
+header {
+    width: 100%;
+}
+
+.top-nav {
+    overflow: hidden;
+    height: 12rem;
+    background: #ffffff;
+    width: 100%;
+    padding: 0.5rem 0rem 1.5rem 1.5rem;
+    line-height: 1rem;
+    position: fixed;
+}
+
+#logo {
+    height: 8rem;
+}
+
+#logo-div {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding-right: 2.5rem;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: turquoise;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+/* game section */
+
+#game-area {
+    min-height: 80vh;
+    padding-top: 15rem;
+}
+
+.flex-grid {
+    display: flex;
+}
+
+.col {
+    flex: 3;
+  }
+
+.mole-area img {
+    width: 7rem;
+}
+
+
+ /* Footer  */
+
+ footer {
+    width: 100%;
+    height: 6rem;
+    background-color: red;
+ }
+
+#footer-wrapper {
+
+}
+
+ #social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+ }
+
+ #social-icons > a {
+    padding: 0 4rem;
+    font-size: 2rem;
+    color: black;
+ }
+
+ #social-icons > a:hover {
+    color: paleturquoise;
+ }
+
+ footer p {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-bottom: 2rem;
+ }
+
