@@ -79,14 +79,20 @@ header {
 #game-area {
     min-height: 80vh;
     padding-top: 15rem;
+
 }
 
 .flex-grid {
+    padding-left: 35rem;
+    padding-right: 35rem;
     display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 .col {
-    flex: 3;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
 .mole-area img {
