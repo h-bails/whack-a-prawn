@@ -17,4 +17,20 @@ function playMusic() {
 
 document.getElementById("view-instructions").addEventListener("click", showInstructions)
 
+function showInstructions () {
+    let popup = document.getElementById("popup")
 
+    if (popup.style.visibility = "hidden") {
+        popup.style.visibility = "visible";
+    } else {
+        popup.style.visibility = "hidden";
+    }
+}
+
+document.getElementById("popup-close").addEventListener("click", closePopUp)
+
+function closePopUp () {
+    let popup = document.getElementById("popup")
+    
+    popup.style.visibility = "hidden";
+}
