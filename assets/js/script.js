@@ -34,3 +34,15 @@ function closePopUp () {
     
     popup.style.visibility = "hidden";
 }
+
+/** Displays image of prawn in a random div */
+
+document.getElementById("start-game").addEventListener("click", displayPrawns)
+
+function displayPrawns () {
+    let holes = document.getElementsByClassName("mole-area");
+    let randomIndex = Math.floor(Math.random() * holes.length);
+    let randomDiv = holes[randomIndex]
+    randomDiv.innerHTML = `<img src="./assets/images/prawn-hole.png" alt="empty mole hole">`
+}
+
