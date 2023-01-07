@@ -43,6 +43,11 @@ function displayPrawns () {
     let holes = document.getElementsByClassName("mole-area");
     let randomIndex = Math.floor(Math.random() * holes.length);
     let randomDiv = holes[randomIndex]
-    randomDiv.innerHTML = `<img src="./assets/images/prawn-hole.png" alt="empty mole hole">`
+    randomDiv.innerHTML = `<img src="./assets/images/prawn-hole.png">`
+
+    setTimeout(function() {
+        randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+      }, 2000);
 }
 
+setInterval(displayPrawns, 3000);
