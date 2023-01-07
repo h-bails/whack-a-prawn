@@ -9,7 +9,7 @@ function playMusic() {
     if (audio.paused) {
         audio.play();
         loop = true;
-        audio.volume = 0.5;
+        audio.volume = 0.3;
     } else {
         audio.pause();
     }
@@ -52,6 +52,7 @@ function displayPrawns () {
     let randomDiv = holes[randomIndex]
     let prawn = document.createElement("img")
     prawn.src = "./assets/images/prawn-hole.png"
+    let imageClicked = false
 
     // Add a prawn to a random div
     randomDiv.innerHTML = ""
@@ -62,11 +63,17 @@ function displayPrawns () {
         console.log("Prawn whacked!");
         ++score;
         document.getElementById("score").innerText = score;
+        imageClicked = true
     })
 
     // Revert the random div to an empty hole
     setTimeout(function() {
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+        if (!imageClicked) {
+            console.log("You missed a prawn!")
+            ++missed;
+            document.getElementById("missed").innerText = missed;
+        }
       }, 2000);
       
 }
@@ -76,7 +83,7 @@ function displayPrawns () {
 if (score > 5) {
     setInterval(displayPrawns, 2000);
 } else if (score > 10) {
-    setInterval(displayPrawns, 1000)
-} else if (score > 15) {
     setInterval(displayPrawns, 500)
+} else if (score > 15) {
+    setInterval(displayPrawns, 10)
 }
