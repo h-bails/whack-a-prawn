@@ -1,13 +1,13 @@
-/** Toggles the music on and off when "Toggle Music" link is clicked */
-
-document.getElementById("toggle-music").addEventListener("click", playMusic);
+/** Global variables */
 let audio = new Audio("https://incompetech.com/music/royalty-free/mp3-royaltyfree/Disco%20con%20Tutti.mp3");
 let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
 let holes = document.getElementsByClassName("mole-area");
 let prawnInterval
-let randomIndex = Math.floor(Math.random() * holes.length);
-let randomDiv = holes[randomIndex]
+
+
+/** Toggles the music on and off when "Toggle Music" link is clicked */
+document.getElementById("toggle-music").addEventListener("click", playMusic);
 
 function playMusic() {
     if (audio.paused) {
@@ -20,7 +20,6 @@ function playMusic() {
 }
 
 /** Displays instructions when 'Instructions' link is clicked */
-
 document.getElementById("view-instructions").addEventListener("click", showInstructions);
 
 function showInstructions () {
@@ -33,6 +32,7 @@ function showInstructions () {
     }
 }
 
+// Closes the pop-up when 'OK' is clicked
 document.getElementById("popup-close").addEventListener("click", closePopUp)
 
 function closePopUp () {
@@ -50,7 +50,9 @@ function startGame() {
 }
 
 function displayPrawns () {
-    let prawn = document.createElement("img")
+    let randomIndex = Math.floor(Math.random() * holes.length);
+    let randomDiv = holes[randomIndex]
+    let prawn = document.createElement("img");
     prawn.src = "./assets/images/prawn-hole.png"
     let imageClicked = false
 
@@ -68,7 +70,8 @@ function displayPrawns () {
         time = time - (score * 100);
     });
 
-    // Revert the random div to an empty hole
+    // Revert the random div to an empty hole 
+    // and increment missed prawns if prawn not clicked
         let timeout = setTimeout(function() {
             randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
             if (!imageClicked) {
@@ -78,10 +81,10 @@ function displayPrawns () {
             }
         }, 2000);
     
-    // display a popup once 5 prawns are missed
-
+    // Display a popup once 5 prawns are missed
       if (missed >= 5) {
         let losePopup = document.getElementById("lose-popup");
+        randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
         losePopup.style.visibility = "visible";
         clearTimeout(timeout);
         clearInterval(prawnInterval);
@@ -89,8 +92,7 @@ function displayPrawns () {
 }
 
 
-/** Resets the game when OK is clicked on lose-popup */
-
+/** Resets the game when OK is clicked after "You Lose" is displayed */
 document.getElementById("lose-popup-close").addEventListener("click", resetGame)
 
 function resetGame() {
@@ -101,5 +103,4 @@ function resetGame() {
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
     document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
-    randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`
 }
