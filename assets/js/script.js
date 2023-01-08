@@ -4,8 +4,8 @@ document.getElementById("toggle-music").addEventListener("click", playMusic);
 let audio = new Audio("https://incompetech.com/music/royalty-free/mp3-royaltyfree/Disco%20con%20Tutti.mp3");
 let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
+let holes = document.getElementsByClassName("mole-area");
 let prawnInterval
-let time = 3000 - (score * 50)
 
 function playMusic() {
     if (audio.paused) {
@@ -34,11 +34,8 @@ function showInstructions () {
 document.getElementById("popup-close").addEventListener("click", closePopUp)
 
 function closePopUp () {
-    let popup = document.getElementById("popup")
-    let losePopup = document.getElementById("lose-popup")
-    
+    let popup = document.getElementById("popup")    
     popup.style.visibility = "hidden";
-    losePopup.style.visibility = "hidden";
 }
 
 /** Displays image of prawn in a random div */
@@ -47,11 +44,10 @@ document.getElementById("start-game").addEventListener("click", startGame)
 
 function startGame() {
     displayPrawns();
-    prawnInterval = setInterval(displayPrawns, time);
+    prawnInterval = setInterval(displayPrawns, 1000);
 }
 
 function displayPrawns (time) {
-    let holes = document.getElementsByClassName("mole-area");
     let randomIndex = Math.floor(Math.random() * holes.length);
     let randomDiv = holes[randomIndex]
     let prawn = document.createElement("img")
@@ -92,5 +88,14 @@ function displayPrawns (time) {
       }
 }
 
-document.getElementById("lose-popup-close").addEventListener("click", closePopUp)
+/** Resets the game when OK is clicked on lose-popup */
 
+document.getElementById("lose-popup-close").addEventListener("click", resetGame)
+
+function resetGame() {
+    let losePopup = document.getElementById("lose-popup")
+    losePopup.style.visibility = "hidden";
+    document.getElementById("score").innerText = "0";
+    document.getElementById("missed").innerText = "0";
+    holes.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+}
