@@ -42,8 +42,9 @@ function closePopUp () {
 document.getElementById("start-game").addEventListener("click", startGame)
 
 function startGame() {
+    let time = 3000 - (score * 100)
     displayPrawns();
-    setInterval(displayPrawns, 3000)
+    setInterval(displayPrawns, time);
 }
 
 function displayPrawns () {
@@ -64,6 +65,7 @@ function displayPrawns () {
         ++score;
         document.getElementById("score").innerText = score;
         imageClicked = true
+        randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
     })
 
     // Revert the random div to an empty hole
@@ -80,10 +82,3 @@ function displayPrawns () {
 
 /** Increase difficulty as score increases */
 
-if (score > 5) {
-    setInterval(displayPrawns, 2000);
-} else if (score > 10) {
-    setInterval(displayPrawns, 500)
-} else if (score > 15) {
-    setInterval(displayPrawns, 10)
-}
