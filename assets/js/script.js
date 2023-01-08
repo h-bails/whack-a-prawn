@@ -44,10 +44,10 @@ document.getElementById("start-game").addEventListener("click", startGame)
 
 function startGame() {
     displayPrawns();
-    prawnInterval = setInterval(displayPrawns, 1000);
+    prawnInterval = setInterval(displayPrawns, 3000);
 }
 
-function displayPrawns (time) {
+function displayPrawns () {
     let randomIndex = Math.floor(Math.random() * holes.length);
     let randomDiv = holes[randomIndex]
     let prawn = document.createElement("img")
@@ -65,11 +65,11 @@ function displayPrawns (time) {
         document.getElementById("score").innerText = score;
         imageClicked = true
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
-        time = time - (score * 100)
-    })
+        time = time - (score * 100);
+    });
 
     // Revert the random div to an empty hole
-        let interval = setTimeout(function() {
+        let timeout = setTimeout(function() {
             randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
             if (!imageClicked) {
                 console.log("You missed a prawn!")
@@ -83,10 +83,11 @@ function displayPrawns (time) {
       if (missed >= 5) {
         let losePopup = document.getElementById("lose-popup");
         losePopup.style.visibility = "visible";
-        clearTimeout(interval);
+        clearTimeout(timeout);
         clearInterval(prawnInterval);
       }
 }
+
 
 /** Resets the game when OK is clicked on lose-popup */
 
@@ -97,5 +98,5 @@ function resetGame() {
     losePopup.style.visibility = "hidden";
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
-    holes.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+    document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
 }
