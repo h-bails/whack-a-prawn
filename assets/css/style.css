@@ -136,7 +136,7 @@ header {
 
 /* Instructions pop-up */
 
-#popup {
+#popup, #lose-popup {
     background-color: #ffffff;
     width: 25rem;
     padding: 40px;
@@ -151,11 +151,11 @@ header {
     visibility: hidden;
 }
 
-#popup > p {
+#popup > p, #lose-popup > p {
     padding: 0.8rem 0;
 }
 
-#popup > button {
+#popup > button, #lose-popup > button {
     padding: 0.5rem;
     font-family: "Mulish", sans-serif;
     font-weight: 700;
