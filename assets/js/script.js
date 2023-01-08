@@ -6,6 +6,8 @@ let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
 let holes = document.getElementsByClassName("mole-area");
 let prawnInterval
+let randomIndex = Math.floor(Math.random() * holes.length);
+let randomDiv = holes[randomIndex]
 
 function playMusic() {
     if (audio.paused) {
@@ -48,8 +50,6 @@ function startGame() {
 }
 
 function displayPrawns () {
-    let randomIndex = Math.floor(Math.random() * holes.length);
-    let randomDiv = holes[randomIndex]
     let prawn = document.createElement("img")
     prawn.src = "./assets/images/prawn-hole.png"
     let imageClicked = false
@@ -96,7 +96,10 @@ document.getElementById("lose-popup-close").addEventListener("click", resetGame)
 function resetGame() {
     let losePopup = document.getElementById("lose-popup")
     losePopup.style.visibility = "hidden";
+    score = 0;
+    missed = 0;
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
     document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+    randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`
 }
