@@ -116,9 +116,12 @@ I designed the logo myself using [Canva](https://canva.com).
     - No errors were found when passing through the official (Jigsaw) validator
     - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fh-bails.github.io%2Fwhack-a-prawn%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - JavaScript
-    - Jshint validator
+    - [JSHint validator results](#)
     - The following metrics were returned:
-    - 
+    - There are 8 functions in this file.
+    - Function with the largest signature take 0 arguments, while the median is 0.
+    - Largest function has 21 statements in it, while the median is 4.5.
+    - The most complex function has a cyclomatic complexity value of 3 while the median is 1.5.
 - Accessibility
     - No errors were found when passing through the WAVE aaccessibility tool
     - [Results](https://wave.webaim.org/report#/https://h-bails.github.io/whack-a-prawn/)
