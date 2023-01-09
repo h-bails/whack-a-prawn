@@ -91,15 +91,28 @@ function displayPrawns () {
         clearTimeout(timeout);
         clearInterval(prawnInterval);
       }
+    
+      // Display a popup once 10 prawns are hit
+      if (score >= 5) {
+        let winPopup = document.getElementById("win-popup");
+        randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+        winPopup.style.visibility = "visible";
+        clearTimeout(timeout);
+        clearInterval(prawnInterval);
+      }
 }
 
 
-/** Resets the game when OK is clicked after "You Lose" is displayed */
+/** Resets the game when button is clicked after win/lose modal is displayed */
 document.getElementById("lose-popup-close").addEventListener("click", resetGame)
+document.getElementById("win-popup-close").addEventListener("click", resetGame)
+
 
 function resetGame() {
     let losePopup = document.getElementById("lose-popup")
+    let winPopup = document.getElementById("win-popup")
     losePopup.style.visibility = "hidden";
+    winPopup.style.visibility = "hidden";
     score = 0;
     missed = 0;
     document.getElementById("score").innerText = "0";
