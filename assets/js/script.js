@@ -1,5 +1,6 @@
 /** Global variables */
 let audio = new Audio("https://incompetech.com/music/royalty-free/mp3-royaltyfree/Disco%20con%20Tutti.mp3");
+let whackSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/24/audio_377f11432b.mp3?filename=kung-fu-punch-4-105262.mp3")
 let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
 let holes = document.getElementsByClassName("mole-area");
@@ -65,7 +66,8 @@ function displayPrawns () {
         console.log("Prawn whacked!");
         ++score;
         document.getElementById("score").innerText = score;
-        imageClicked = true
+        imageClicked = true;
+        whackSound.play();
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
         time = time - (score * 100);
     });

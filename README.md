@@ -149,6 +149,7 @@ The live link can be found [here.](https://h-bails.github.io/whack-a-prawn/)
 
 - Game images and background were designed by me with [Canva.](https://www.canva.com/)
 - Background music is Disco con Tutti by Kevin MacLeod is licensed under a [Creative Commons Attribution 4.0 license.](https://creativecommons.org/licenses/by/4.0/)
+- Sound effect Kung Fu Punch 4 is from peridactyloptrix on [Pixabay](https://pixabay.com/sound-effects/kung-fu-punch-4-105262/) and is [free for commercial and noncommercial use](https://pixabay.com/service/license/)
 
 ## __Acknowledgements__
 
