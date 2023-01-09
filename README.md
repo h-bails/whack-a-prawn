@@ -1,108 +1,155 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# __Whack-a-Prawn - Portfolio Project 2__
+This is a website for Whack-a-Prawn, a whack-a-mole style game with a twist. The user’s yard has been taken over by [Parktown Prawns](https://en.wikipedia.org/wiki/Parktown_prawn), a large species of (much-disliked) cricket native to South Africa. The user will have to eliminate a certain amount of prawns from the yard in order to win the game. If the user misses 5 prawns, they lose the game.
 
-Welcome h-bails,
+The aim of this project was to build an interactive front-end site using Javascript, which responds to the user's actions and changes the way the site displays information according to said actions.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Live website:](https://h-bails.github.io/whack-a-prawn/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## __UX & Design__
+This is a simple game requiring only one page, with modal pop-ups for instructions and notifications. The remaining design is fairly simple, allowing the user to focus on the game without distraction.
 
-## Gitpod Reminders
+### __Wireframes__
+Before the project build commenced, I used Figma to draw a loose wireframe of the final result. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Homepage wireframe](LINK)
 
-`python3 -m http.server`
+### __Typography__
+I used [Google Fonts](https://fonts.google.com/) to select and import the fonts used in the body text (Mulish).
 
-A blue button should appear to click: _Make Public_,
+I designed the logo myself using [Canva](https://canva.com).
 
-Another blue button should appear to click: _Open Browser_.
+## __Features__ 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- __Favicon__
+    - A small insect serves as the favicon, so the user can easily identify the game’s tab in the browser. 
 
-A blue button should appear to click: _Make Public_,
+![Favicon](LINK)
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- __Whack-a-Prawn Logo__
+    - The logo appears at the top of the page and shows the user the name of the game.
+    
+    ![Logo](LINK)
+    
 
-To log into the Heroku toolbelt CLI:
+- __Control Buttons__
+    - The top buttons (or rather, links) allow the user to control music, view instructions, and start the game.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Game settings buttons](LINK)
+    
+- __Toggle Music button__
+    -  This button allows the user to toggle the game's music. The music is turned ‘off’ by default as per best practice. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Play music](LINK)
 
-------
+- __Toggle Instructions button__
+     - This button allows the user to view the premise of the game and how to play.
 
-## Release History
+![Instructions](LINK)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- __Instructions Modal__
+    - The instructions pop-up appears when the user clicks on the instructions button and explains the game's rules and controls. The box can be closed by clicking the "OK!" button at the bottom of the modal.
+    
+    ![Instructions modal box](LINK)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- __Game Area__
+    - The game area consists of 9 ‘holes’ from which a prawn will pop up at random. There is also a scoreboard to the left to track how many prawns have been hit and/or missed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    ![Game area](LINK)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- __Footer__
+    - The footer displays my name, the Code Institute module, and a link to my GitHub and LinkedIn pages.
+    ![Footer](LINK)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## __Features Left to Implement__
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- __FEATURE__
+    - TEXT
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- __FEATURE__
+    - TEXT
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- __FEATURE__
+    - TEXT
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## __Languages Used__
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## __Frameworks, Libraries & Programs Used__
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import the Mulish font for use in the CSS styles.
+- [Github](https://github.com/)
+    - Used to store the project's code after being pushed from Git.
+- [Gitpod](https://gitpod.io/)
+    - Used to commit code using Git and push it to Github.
+- [Canva](https://www.canva.com/)
+    - Used to design the logo, prawns, prawn holes and background.
+- [Figma](https://figma.com/)
+    - Used to design the wireframes for the project.
+- [Favicon.io](http://favicon.io)
+    - Techsini was used to generate a favicon for the project.
+- [Font Awesome](http://favicon.io)
+    - Used to generate footer icons.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## __Testing__
 
-------
+- __Manual Testing__
+- The quiz was manually tested on a MacBook Pro, Samsung S10 and Google Chromebook. It was manually tested in both Chrome, Safari and Firefox.
+- Developer Tools was used to make sure everything was responsive.
 
-## FAQ about the uptime script
+- __Validator Testing__
 
-**Why have you added this script?**
+HTML
+No errors were returned when passing through the official W3C validator
+LINK TO RESULTS
+CSS
+No errors were found when passing through the official (Jigsaw) validator
+LINK TO RESULTS
+JavaScript
+Jshint validator
+The following metrics were returned:
+INSERT METRICS
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- __Fixed bugs__
 
-**How will this affect me?**
+INSERT BUGS
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- __Unfixed bugs__
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+INSERT BUGS
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+## __Deployment__
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The site is deployed to GitHub pages. The steps to deploy are: 
+  - In the [GitHub repository](https://github.com/h-bails/whack-a-prawn), navigate to the Settings tab. 
+  - On the left-hand menu, click on “Pages”. 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-**Can I opt out?**
+The live link can be found [here.](https://h-bails.github.io/whack-a-prawn/)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## __Credits__
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### __Code__
 
-**Anything more?**
+- Code for the ability to toggle music was inspired by [FreeCodeCamp.](https://forum.freecodecamp.org/t/how-to-play-mp3-in-the-background-music-automatically/308554)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### __Content__
 
----
+- All website text content was created and written by me.
 
-Happy coding!
+### __Media__
+
+- Game images and background were designed by me with [Canva.](https://www.canva.com/)
+- Background music is Disco con Tutti by Kevin MacLeod is licensed under a [Creative Commons Attribution 4.0 license.](https://creativecommons.org/licenses/by/4.0/)
+
+## __Acknowledgements__
+
+I would like to give special thanks to my partner, Harry O’Connor, for dealing with my gremlin mood during this project (and module) and picking up the slack around the house to free up time for me!
