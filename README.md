@@ -103,6 +103,10 @@ I designed the logo myself using [Canva](https://canva.com).
 - The quiz was manually tested on a MacBook Pro, Samsung S10 and Google Chromebook. It was manually tested in both Chrome, Safari and Firefox.
 - Developer Tools was used to make sure everything was responsive.
 
+- __Lightouse Testing__
+- I used Lighthouse to test performance on Desktop and Mobile. Overall performance was 99/100 and results were above 89/100 across all areas.
+- [Link to Lighthouse report](https://pagespeed.web.dev/report?url=https%3A%2F%2Fh-bails.github.io%2Fwhack-a-prawn%2F&form_factor=desktop)
+
 - __Validator Testing__
 
 - HTML
