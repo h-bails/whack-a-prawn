@@ -105,16 +105,19 @@ I designed the logo myself using [Canva](https://canva.com).
 
 - __Validator Testing__
 
-HTML
-No errors were returned when passing through the official W3C validator
-LINK TO RESULTS
-CSS
-No errors were found when passing through the official (Jigsaw) validator
-LINK TO RESULTS
-JavaScript
-Jshint validator
-The following metrics were returned:
-INSERT METRICS
+- HTML
+    - No errors were returned when passing through the official W3C validator
+    - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fh-bails.github.io%2Fwhack-a-prawn%2F)
+- CSS
+    - No errors were found when passing through the official (Jigsaw) validator
+    - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fh-bails.github.io%2Fwhack-a-prawn%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- JavaScript
+    - Jshint validator
+    - The following metrics were returned:
+    - 
+- Accessibility
+    - No errors were found when passing through the WAVE aaccessibility tool
+    - [Results](https://wave.webaim.org/report#/https://h-bails.github.io/whack-a-prawn/)
 
 - __Fixed bugs__
 
