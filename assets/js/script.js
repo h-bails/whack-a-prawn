@@ -33,7 +33,7 @@ function showInstructions () {
     }
 }
 
-// Closes the pop-up when 'OK' is clicked
+/** Closes the pop-up when 'OK' is clicked */ 
 document.getElementById("popup-close").addEventListener("click", closePopUp)
 
 function closePopUp () {
@@ -41,15 +41,15 @@ function closePopUp () {
     popup.style.visibility = "hidden";
 }
 
-/** Displays image of prawn in a random div */
-
 document.getElementById("start-game").addEventListener("click", startGame)
 
+/** Starts the game and sets the timer for the prawns to display */
 function startGame() {
     displayPrawns();
     prawnInterval = setInterval(displayPrawns, 3000);
 }
 
+/** Displays image of prawn in a random div */
 function displayPrawns () {
     let randomIndex = Math.floor(Math.random() * holes.length);
     let randomDiv = holes[randomIndex]
@@ -72,8 +72,7 @@ function displayPrawns () {
         time = time - (score * 100);
     });
 
-    // Revert the random div to an empty hole 
-    // and increment missed prawns if prawn not clicked
+    // Revert the random div to an empty hole and increment 'prawns missed' if prawn not clicked
         let timeout = setTimeout(function() {
             randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
             if (!imageClicked) {
@@ -83,7 +82,7 @@ function displayPrawns () {
             }
         }, 2000);
     
-    // Display a popup once 5 prawns are missed
+    // Display a modal once 5 prawns are missed
       if (missed >= 5) {
         let losePopup = document.getElementById("lose-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
@@ -92,7 +91,7 @@ function displayPrawns () {
         clearInterval(prawnInterval);
       }
     
-      // Display a popup once 10 prawns are hit
+      // Display a modal once 10 prawns are hit
       if (score >= 5) {
         let winPopup = document.getElementById("win-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
