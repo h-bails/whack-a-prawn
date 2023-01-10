@@ -9,6 +9,8 @@ const laughSound = new Audio("./assets/sounds/prawn-laugh.mp3")
 let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
 let holes = document.getElementsByClassName("mole-area");
+let popup = document.getElementById("popup");
+popup.style.visibility = "hidden";
 let prawnInterval;
 
 
@@ -30,8 +32,6 @@ function playMusic() {
 document.getElementById("view-instructions").addEventListener("click", showInstructions);
 
 function showInstructions () {
-    let popup = document.getElementById("popup");
-
     if (popup.style.visibility === "hidden") {
         popup.style.visibility = "visible";
     } else {

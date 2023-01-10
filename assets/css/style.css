@@ -138,6 +138,7 @@ header {
 
 .mole-area img {
     width: 7rem;
+    -webkit-user-drag: none;
 }
 
 /* Instructions pop-up */

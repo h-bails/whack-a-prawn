@@ -151,12 +151,11 @@ I designed the logo myself using [Canva](https://canva.com).
 
 ## __Fixed bugs__
 
-INSERT BUGS
+- Fixed bug where 'Instructions' button required two clicks to bring up modal.
 
 ## __Unfixed bugs__
 
-INSERT BUGS
-
+- The 'whack' sound sometimes lags on Safari. This is a known bug and will be fixed in future.
 
 ## __Deployment__
 
