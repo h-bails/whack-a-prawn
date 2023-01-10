@@ -75,6 +75,12 @@ header {
     list-style: none;
 }
 
+.fa-play, .fa-pause {
+    font-size: 0.8rem;
+    color: #5CE1E6;
+    padding-right: 0.3rem;
+}
+
 #start-game {
     font-weight: 900;
     color: #FA3343;

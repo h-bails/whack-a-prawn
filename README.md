@@ -172,7 +172,7 @@ The live link can be found [here.](https://h-bails.github.io/whack-a-prawn/)
 
 ### __Code__
 
-- Code for the ability to toggle music was inspired by [FreeCodeCamp.](https://forum.freecodecamp.org/t/how-to-play-mp3-in-the-background-music-automatically/308554)
+- This [Stack Overflow](https://stackoverflow.com/questions/51276757/how-to-toggle-audio-play-pause-with-a-button-click) thread was helpful in figuring out how to toggle music. 
 
 ### __Content__
 

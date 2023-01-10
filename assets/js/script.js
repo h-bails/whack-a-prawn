@@ -16,8 +16,10 @@ function playMusic() {
     if (audio.paused) {
         audio.play();
         audio.volume = 0.3;
+        document.getElementById("toggle-music").innerHTML = `<i class="fa-solid fa-pause"></i> pause music`;
     } else {
         audio.pause();
+        document.getElementById("toggle-music").innerHTML = `<i class="fa-solid fa-play"></i> play music`;
     }
 }
 
