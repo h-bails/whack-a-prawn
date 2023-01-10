@@ -5,6 +5,11 @@ The aim of this project was to build an interactive front-end site using Javascr
 
 [Live website link](https://h-bails.github.io/whack-a-prawn/)
 
+## __Value to the user__
+
+I wanted to create a game that was familiar, but with a bit of a twist. Parktown Prawns are a very large, sometimes aggressive type of cricket native to South Africa, particularly the Highveld region. We all know we shouldn't squish them - they're valuable to the ecosystem - but we REALLY want to! This game gives the user an outlet for that frustration :) Of course, I anticipate that this game would be more popular with South African users given the infamy of the Parktown Prawn in popular culture and its ubiquity in everyday life in Johannesburg. 
+
+
 ## __UX & Design__
 This is a simple game requiring only one page, with modal pop-ups for instructions and notifications. The remaining design is fairly simple, allowing the user to focus on the game without distraction.
 
