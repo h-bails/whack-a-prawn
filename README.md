@@ -84,14 +84,14 @@ I designed the logo myself using [Canva](https://canva.com).
 
 ## __Features Left to Implement__
 
-- __FEATURE__
-    - TEXT
+- __Increase difficulty as score increments__
+    - I spent many hours messing around with setInterval and setTimeout in an effort to increment the prawns' speed (and thus the game's difficulty) as the score increased. Unfortunately I was not able to implement this by the time the project was due, but hopefully in future!
 
-- __FEATURE__
-    - TEXT
+- __Cursor drop and smash__
+    - I'd like to add a cursor effect where a little smash animation appears when a mole is hit. I have added the image in the [assets folder](./assets/images/cursor-smash.png), but unfortunately did not have time to implement before project hand-in. 
 
-- __FEATURE__
-    - TEXT
+- __Modal UX__
+    - I'd like the modals to close if the user clicks anywhere outside the box. I'd also like to blur or grey out the background when a modal appears.
 
 
 ## __Languages Used__
@@ -172,6 +172,8 @@ The live link can be found [here.](https://h-bails.github.io/whack-a-prawn/)
 ### __Code__
 
 - This [Stack Overflow](https://stackoverflow.com/questions/51276757/how-to-toggle-audio-play-pause-with-a-button-click) thread was helpful in figuring out how to toggle music. 
+- This [Stack Overflow](https://stackoverflow.com/questions/55071684/why-my-show-hide-button-needs-double-click-on-first-time) thread was helpful in helping me figure out why my Instuctions modal required two clicks to activate. 
+
 
 ### __Content__
 

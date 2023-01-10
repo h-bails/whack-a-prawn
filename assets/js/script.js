@@ -12,7 +12,7 @@ let holes = document.getElementsByClassName("mole-area");
 let popup = document.getElementById("popup");
 popup.style.visibility = "hidden";
 let prawnInterval;
-
+let gameStarted = false;
 
 /** Toggles the music on and off when "Toggle Music" link is clicked */
 document.getElementById("toggle-music").addEventListener("click", playMusic);
@@ -47,12 +47,22 @@ function closePopUp () {
     popup.style.visibility = "hidden";
 }
 
-document.getElementById("start-game").addEventListener("click", startGame);
+let startStopButton = document.getElementById("start-game")
+startStopButton.addEventListener("click", startGame);
 
 /** Starts the game and sets the timer for the prawns to display */
 function startGame() {
-        displayPrawns();
-        prawnInterval = setInterval(displayPrawns, 1500);
+        if (!gameStarted) {
+            displayPrawns();
+            prawnInterval = setInterval(displayPrawns, 1500);
+            gameStarted = true;
+            startStopButton.textContent = "reset"
+        } else {
+            gameStarted = false;
+            startStopButton.textContent = "start game";
+            resetGame();
+        }
+
 }
 
 /** Displays image of prawn in a random div */
@@ -123,10 +133,13 @@ function resetGame() {
     let winPopup = document.getElementById("win-popup");
     losePopup.style.visibility = "hidden";
     winPopup.style.visibility = "hidden";
+    clearInterval(prawnInterval);
     score = 0;
     missed = 0;
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
     document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
     document.body.style.backgroundImage = "url('./assets/images/background.png')"
+    gameStarted = false;
+    startStopButton.textContent = "start game"
 }
