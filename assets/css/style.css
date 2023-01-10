@@ -9,7 +9,6 @@
   }
 
   html {
-    overflow: hidden;
     height: 100%;
     margin: 0;
   }
@@ -19,8 +18,9 @@ body {
     margin: 0;
     background-image: url("../images/background.png");
     background-repeat: repeat;
-    background-size: 105%;
+    background-size: cover;
     background-position: top;
+    overflow: hidden;
 }
 
 h1 {
@@ -280,6 +280,9 @@ header {
         padding-right: 50%;
         padding-top: 2rem;
     }
+    footer p {
+        font-size: 0.7rem;
+    }
 }
 
 @media screen and (max-width:438px) {
@@ -289,30 +292,39 @@ header {
         margin: 0;
     }
 
-    .nav-links a {
+    .nav-links li {
         padding-right: 1.5rem;
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
     }
     .col {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
     }
+    footer {
+        justify-content: left;
+    }
+    footer p {
+        font-size: 0.6rem;
+        padding: 0.2rem;
+        min-width: 50%;
+    }
+    footer i {
+        padding: 0rem;
+    }
 }
 
-@media screen and (max-height:366px) {
+@media screen and (max-width:387px) {
     #logo {
-        height: 5rem;
+        height: 6rem;
+        padding: 1rem 0 0 0;
     }
 
-    .nav-links a {
-        padding-right: 1.2rem;
-        font-size: 0.8rem;
-        margin-bottom: 0.8rem;
+    .nav-links li {
+        padding: 0 0.5rem 0 0;
+        font-size: 0.9rem;
     }
     .col {
-        padding-left: 0.6rem;
-        padding-right: 0.6rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
     }
 }
-

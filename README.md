@@ -50,7 +50,7 @@ I designed the logo myself using [Canva](https://canva.com).
 - __Toggle Instructions button__
      - This button allows the user to view the premise of the game and how to play.
 - __Start Game button__
-     - This button sets the prawns in motion, displaying them in random divs to be whacked.
+     - This button sets the prawns in motion, displaying them in random divs to be whacked. The user has the option to reset the game on their second click.
 
 - __Instructions Modal__
     - The instructions pop-up appears when the user clicks on the instructions button and explains the game's rules and controls. The box can be closed by clicking the "OK!" button at the bottom of the modal.
@@ -63,6 +63,18 @@ I designed the logo myself using [Canva](https://canva.com).
 
 
     ![Game area](./assets/images/game-area.png)
+
+- __Game Area Cursor__
+    - Styled as a hammer, ideal for whacking prawns.
+
+
+    ![Game area](./assets/images/cursor-plain.png)
+
+- __Prawns__
+    - These pop up in random divs (styled as holes in the ground) and make a satisfying 'whack' sound when hit, incrementing the user's score.
+
+    ![Game area](./assets/images/prawn-hole.png)
+
 
 - __'You Win' Modal__
     - Appears when 10 or more prawns are whacked. A sound effect plays and the button will reset the game.
@@ -92,6 +104,9 @@ I designed the logo myself using [Canva](https://canva.com).
 
 - __Modal UX__
     - I'd like the modals to close if the user clicks anywhere outside the box. I'd also like to blur or grey out the background when a modal appears.
+
+- __Pause game__
+    - I'd like the user to be able to either pause or reset the game depending on their preference.
 
 
 ## __Languages Used__

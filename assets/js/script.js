@@ -3,8 +3,8 @@
 /** Global variables */
 const audio = new Audio("https://incompetech.com/music/royalty-free/mp3-royaltyfree/Disco%20con%20Tutti.mp3");
 const whackSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/24/audio_377f11432b.mp3?filename=kung-fu-punch-4-105262.mp3");
-const successSound = new Audio("https://cdn.pixabay.com/download/audio/2021/08/04/audio_12b0c7443c.mp3?filename=success-fanfare-trumpets-6185.mp3")
-const laughSound = new Audio("./assets/sounds/prawn-laugh.mp3")
+const successSound = new Audio("https://cdn.pixabay.com/download/audio/2021/08/04/audio_12b0c7443c.mp3?filename=success-fanfare-trumpets-6185.mp3");
+const laughSound = new Audio("./assets/sounds/prawn-laugh.mp3");
 
 let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
@@ -47,7 +47,7 @@ function closePopUp () {
     popup.style.visibility = "hidden";
 }
 
-let startStopButton = document.getElementById("start-game")
+let startStopButton = document.getElementById("start-game");
 startStopButton.addEventListener("click", startGame);
 
 /** Starts the game and sets the timer for the prawns to display */
@@ -56,7 +56,7 @@ function startGame() {
             displayPrawns();
             prawnInterval = setInterval(displayPrawns, 1500);
             gameStarted = true;
-            startStopButton.textContent = "reset"
+            startStopButton.textContent = "reset";
         } else {
             gameStarted = false;
             startStopButton.textContent = "start game";
@@ -100,7 +100,7 @@ function displayPrawns () {
     
     // Display a modal once 5 prawns are missed
       if (missed >= 5) {
-        document.body.style.backgroundImage = "url('./assets/images/background-lose.png')"
+        document.body.style.backgroundImage = "url('./assets/images/background-lose.png')";
         let losePopup = document.getElementById("lose-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
         document.getElementById("start-game").innerText = "start game";
@@ -139,7 +139,7 @@ function resetGame() {
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
     document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
-    document.body.style.backgroundImage = "url('./assets/images/background.png')"
+    document.body.style.backgroundImage = "url('./assets/images/background.png')";
     gameStarted = false;
-    startStopButton.textContent = "start game"
+    startStopButton.textContent = "start game";
 }
