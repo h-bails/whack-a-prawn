@@ -65,13 +65,13 @@ I designed the logo myself using [Canva](https://canva.com).
     ![Game area](./assets/images/game-area.png)
 
 - __'You Win' Modal__
-    - Appears when 10 or more prawns are whacked.
+    - Appears when 10 or more prawns are whacked. A sound effect plays and the button will reset the game.
     
 
     ![Instructions modal box](./assets/images/win-modal.png)
 
 - __'You Lose' Modal__
-    - Appears when 5 or more prawns are missed.
+    - Appears when 5 or more prawns are missed. A sound effect plays and the background image changes. The button will reset the game.
     
 
     ![Instructions modal box](./assets/images/lose-modal.png)
@@ -183,6 +183,9 @@ The live link can be found [here.](https://h-bails.github.io/whack-a-prawn/)
 - Game images and background were designed by me with [Canva.](https://www.canva.com/)
 - Background music is Disco con Tutti by Kevin MacLeod is licensed under a [Creative Commons Attribution 4.0 license.](https://creativecommons.org/licenses/by/4.0/)
 - Sound effect Kung Fu Punch 4 is from peridactyloptrix on [Pixabay](https://pixabay.com/sound-effects/kung-fu-punch-4-105262/) and is [free for commercial and noncommercial use](https://pixabay.com/service/license/).
+- Sound effect Success Fanfare Trumpets is from FunWithSound on [Pixabay](https://pixabay.com/sound-effects/success-fanfare-trumpets-6185/) and is [free for commercial and noncommercial use](https://pixabay.com/service/license/).
+- Sound effect Cartoon Laugh is from JohnsonBrandEditing on [Pixabay](https://pixabay.com/sound-effects/cartoon-laugh-6457/) and is [free for commercial and noncommercial use](https://pixabay.com/service/license/).
+
 
 ## __Acknowledgements__
 

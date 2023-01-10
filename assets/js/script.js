@@ -52,7 +52,7 @@ document.getElementById("start-game").addEventListener("click", startGame);
 /** Starts the game and sets the timer for the prawns to display */
 function startGame() {
         displayPrawns();
-        prawnInterval = setInterval(displayPrawns, 3000);
+        prawnInterval = setInterval(displayPrawns, 1500);
 }
 
 /** Displays image of prawn in a random div */
@@ -86,7 +86,7 @@ function displayPrawns () {
                 ++missed;
                 document.getElementById("missed").innerText = missed;
             }
-        }, 2000);
+        }, 1000);
     
     // Display a modal once 5 prawns are missed
       if (missed >= 5) {
@@ -101,7 +101,7 @@ function displayPrawns () {
       }
     
       // Display a modal once 10 prawns are hit
-      if (score >= 5) {
+      if (score >= 10) {
         let winPopup = document.getElementById("win-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
         document.getElementById("start-game").innerText = "start game";
