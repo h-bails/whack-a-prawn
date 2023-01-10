@@ -1,8 +1,11 @@
 // jshint esversion: 6
 
 /** Global variables */
-let audio = new Audio("https://incompetech.com/music/royalty-free/mp3-royaltyfree/Disco%20con%20Tutti.mp3");
-let whackSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/24/audio_377f11432b.mp3?filename=kung-fu-punch-4-105262.mp3");
+const audio = new Audio("https://incompetech.com/music/royalty-free/mp3-royaltyfree/Disco%20con%20Tutti.mp3");
+const whackSound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/24/audio_377f11432b.mp3?filename=kung-fu-punch-4-105262.mp3");
+const successSound = new Audio("https://cdn.pixabay.com/download/audio/2021/08/04/audio_12b0c7443c.mp3?filename=success-fanfare-trumpets-6185.mp3")
+const laughSound = new Audio("./assets/sounds/prawn-laugh.mp3")
+
 let score = parseInt(document.getElementById("score").innerText);
 let missed = parseInt(document.getElementById("missed").innerText);
 let holes = document.getElementsByClassName("mole-area");
@@ -48,8 +51,8 @@ document.getElementById("start-game").addEventListener("click", startGame);
 
 /** Starts the game and sets the timer for the prawns to display */
 function startGame() {
-    displayPrawns();
-    prawnInterval = setInterval(displayPrawns, 3000);
+        displayPrawns();
+        prawnInterval = setInterval(displayPrawns, 3000);
 }
 
 /** Displays image of prawn in a random div */
@@ -59,6 +62,7 @@ function displayPrawns () {
     let prawn = document.createElement("img");
     prawn.src = "./assets/images/prawn-hole.png";
     let imageClicked = false;
+    gameStarted = true;
 
     // Add a prawn to a random div
     randomDiv.innerHTML = "";
@@ -86,20 +90,25 @@ function displayPrawns () {
     
     // Display a modal once 5 prawns are missed
       if (missed >= 5) {
+        document.body.style.backgroundImage = "url('./assets/images/background-lose.png')"
         let losePopup = document.getElementById("lose-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+        document.getElementById("start-game").innerText = "start game";
         losePopup.style.visibility = "visible";
         clearTimeout(timeout);
         clearInterval(prawnInterval);
+        laughSound.play();
       }
     
       // Display a modal once 10 prawns are hit
       if (score >= 5) {
         let winPopup = document.getElementById("win-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+        document.getElementById("start-game").innerText = "start game";
         winPopup.style.visibility = "visible";
         clearTimeout(timeout);
         clearInterval(prawnInterval);
+        successSound.play();
       }
 }
 
@@ -119,4 +128,5 @@ function resetGame() {
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
     document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+    document.body.style.backgroundImage = "url('./assets/images/background.png')"
 }
