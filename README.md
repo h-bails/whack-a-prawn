@@ -96,9 +96,6 @@ I designed the logo myself using [Canva](https://canva.com).
 
 ## __Features Left to Implement__
 
-- __Increase difficulty as score increments__
-    - I spent many hours messing around with setInterval and setTimeout in an effort to increment the prawns' speed (and thus the game's difficulty) as the score increased. Unfortunately I was not able to implement this by the time the project was due, but hopefully in future!
-
 - __Cursor drop and smash__
     - I'd like to add a cursor effect where a little smash animation appears when a mole is hit. I have added the image in the [assets folder](./assets/images/cursor-smash.png), but unfortunately did not have time to implement before project hand-in. 
 
@@ -107,7 +104,9 @@ I designed the logo myself using [Canva](https://canva.com).
 
 - __Pause game__
     - I'd like the user to be able to either pause or reset the game depending on their preference.
-
+    
+- __High score__
+    - I'd like to implement a score board or high score of some kind.
 
 ## __Languages Used__
 

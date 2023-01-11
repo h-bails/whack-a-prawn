@@ -88,7 +88,7 @@ function displayPrawns () {
         whackSound.play();
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
         clearInterval(prawnInterval);
-        interval = Math.max(1500 - (score * 50),700);
+        interval = Math.max(1500 - (score * 50),500);
         prawnInterval = setInterval(displayPrawns, interval);
     });
 
@@ -100,7 +100,7 @@ function displayPrawns () {
                 ++missed;
                 document.getElementById("missed").innerText = missed;
                 clearInterval(prawnInterval);
-                interval = Math.max(1500 - (score * 50),700);
+                interval = Math.max(1500 - (score * 50),500);
                 prawnInterval = setInterval(displayPrawns, interval);
             }
         }, 1000);
