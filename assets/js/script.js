@@ -22,6 +22,7 @@ function playMusic() {
     if (audio.paused) {
         audio.play();
         audio.volume = 0.3;
+        audio.loop = true;
         document.getElementById("toggle-music").innerHTML = `<i class="fa-solid fa-pause"></i> pause music`;
     } else {
         audio.pause();
@@ -98,6 +99,9 @@ function displayPrawns () {
                 console.log("You missed a prawn!");
                 ++missed;
                 document.getElementById("missed").innerText = missed;
+                clearInterval(prawnInterval);
+                interval = Math.max(1500 - (score * 50),700);
+                prawnInterval = setInterval(displayPrawns, interval);
             }
         }, 1000);
     
@@ -124,7 +128,6 @@ function displayPrawns () {
         successSound.play();
       }
 }
-
 
 /** Resets the game when button is clicked after win/lose modal is displayed */
 document.getElementById("lose-popup-close").addEventListener("click", resetGame);

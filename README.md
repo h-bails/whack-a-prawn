@@ -59,7 +59,7 @@ I designed the logo myself using [Canva](https://canva.com).
     ![Instructions modal box](./assets/images/instructions-modal.png)
 
 - __Game Area__
-    - The game area consists of 9 ‘holes’ from which a prawn will pop up at random. There is also a scoreboard to the left to track how many prawns have been hit and/or missed.
+    - The game area consists of 9 ‘holes’ from which a prawn will pop up at random. There is also a scoreboard to the left to track how many prawns have been hit and/or missed. The prawns appear faster and faster as the score increases.
 
 
     ![Game area](./assets/images/game-area.png)
@@ -188,7 +188,7 @@ The live link can be found [here.](https://h-bails.github.io/whack-a-prawn/)
 
 - This [Stack Overflow](https://stackoverflow.com/questions/51276757/how-to-toggle-audio-play-pause-with-a-button-click) thread was helpful in figuring out how to toggle music. 
 - This [Stack Overflow](https://stackoverflow.com/questions/55071684/why-my-show-hide-button-needs-double-click-on-first-time) thread was helpful in helping me figure out why my Instuctions modal required two clicks to activate. 
-
+- [ChatGPT](https://chat.openai.com/chat) was helpful in suggesting how I could increase the speed of the prawns based on the user's score.
 
 ### __Content__
 
