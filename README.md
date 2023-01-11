@@ -1,17 +1,21 @@
 # __Whack-a-Prawn - Portfolio Project 2__
-This is a website for Whack-a-Prawn, a whack-a-mole style game with a twist. The user’s yard has been taken over by [Parktown Prawns](https://en.wikipedia.org/wiki/Parktown_prawn), a large species of (much-disliked) cricket native to South Africa. The user will have to eliminate a certain amount of prawns from the yard in order to win the game. If the user misses 5 prawns, they lose the game.
+This is a website for Whack-a-Prawn, a whack-a-mole style game with a twist. The user’s yard has been taken over by [Parktown Prawns](https://en.wikipedia.org/wiki/Parktown_prawn), a large species of (much-disliked) cricket native to South Africa. The user will have to eliminate a certain amount of prawns from the yard in order to win the game. If the user misses 10 prawns, they lose the game. If they hit 30 prawns, they win the game.
 
 The aim of this project was to build an interactive front-end site using Javascript, which responds to the user's actions and changes the way the site displays information according to said actions.
 
 [Live website link](https://h-bails.github.io/whack-a-prawn/)
 
+![Site preview](./assets/images/mockup-all-devices.png)
+
 ## __Value to the user__
 
-I wanted to create a game that was familiar, but with a bit of a twist. Parktown Prawns are a very large, sometimes aggressive type of cricket native to South Africa, particularly the Highveld region. We all know we shouldn't squish them - they're valuable to the ecosystem - but we REALLY want to! This game gives the user an outlet for that frustration :) Of course, I anticipate that this game would be more popular with South African users given the infamy of the Parktown Prawn in popular culture and its ubiquity in everyday life in Johannesburg. 
+I wanted to create a game that was familiar, but with a bit of a twist. Parktown Prawns are a very large, sometimes aggressive type of cricket native to South Africa, particularly the Highveld region. We all know we shouldn't squish them (they're actually valuable to the ecosystem and actually not at all a threat to one's garden) but we REALLY want to! This game gives the user an outlet for that frustration :) Of course, I anticipate that this game would be more popular with South African users given the infamy of the Parktown Prawn in popular culture and its ubiquity in everyday life in Johannesburg. 
+
+The game is well suited to users looking for an element of challenge or wanting to text their dexterity, as it gets more difficult the higher the score!
 
 
 ## __UX & Design__
-This is a simple game requiring only one page, with modal pop-ups for instructions and notifications. The remaining design is fairly simple, allowing the user to focus on the game without distraction.
+This is a simple game requiring only one page, with modal pop-ups for instructions and notifications. The remaining design is fairly straightforward, allowing the user to focus on the game without distraction. I did want to make it look quite cartoonish, as it's intended to be a fun and light-hearted game.
 
 ## __Wireframes__
 Before the project build commenced, I used Figma to draw a loose mockup of the final result. 
@@ -77,13 +81,13 @@ I designed the logo myself using [Canva](https://canva.com).
 
 
 - __'You Win' Modal__
-    - Appears when 10 or more prawns are whacked. A sound effect plays and the button will reset the game.
+    - Appears when 10 or more prawns are whacked. A sound effect plays and clicking the button will reset the game.
     
 
     ![Instructions modal box](./assets/images/win-modal.png)
 
 - __'You Lose' Modal__
-    - Appears when 5 or more prawns are missed. A sound effect plays and the background image changes. The button will reset the game.
+    - Appears when 5 or more prawns are missed. A sound effect plays and the background image changes. Clicking the button will reset the game.
     
 
     ![Instructions modal box](./assets/images/lose-modal.png)
@@ -130,11 +134,13 @@ I designed the logo myself using [Canva](https://canva.com).
     - Used to generate a favicon for the project.
 - [Font Awesome](http://favicon.io)
     - Used to generate footer icons.
+- [Websitemockupgenerator.com](https://websitemockupgenerator.com/)
+    - Used to generate responsive mockups.
 
 ## __Testing__
 
 - __Manual Testing__
-    - The quiz was manually tested on a MacBook Pro, Samsung S10 and Google Chromebook. It was manually tested in both Chrome, Safari and Firefox.
+    - The quiz was manually tested on a MacBook Pro, Samsung S10 and Google Chromebook. It was tested in Chrome, Safari and Firefox.
     - Developer Tools was used to make sure everything was responsive.
 
 
@@ -169,7 +175,7 @@ I designed the logo myself using [Canva](https://canva.com).
 
 ## __Unfixed bugs__
 
-- The 'whack' sound sometimes lags on Safari. This is a known bug and will be fixed in future.
+- The 'whack' sound sometimes lags when the prawns speed up, especially in Safari. This is a known bug and will be fixed in future.
 
 ## __Deployment__
 
