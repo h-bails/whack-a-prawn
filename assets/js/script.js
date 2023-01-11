@@ -11,6 +11,7 @@ let missed = parseInt(document.getElementById("missed").innerText);
 let holes = document.getElementsByClassName("mole-area");
 let popup = document.getElementById("popup");
 popup.style.visibility = "hidden";
+let interval;
 let prawnInterval;
 let gameStarted = false;
 
@@ -54,7 +55,6 @@ startStopButton.addEventListener("click", startGame);
 function startGame() {
         if (!gameStarted) {
             displayPrawns();
-            prawnInterval = setInterval(displayPrawns, 1500);
             gameStarted = true;
             startStopButton.textContent = "reset";
         } else {
@@ -78,7 +78,7 @@ function displayPrawns () {
     randomDiv.innerHTML = "";
     randomDiv.appendChild(prawn);
 
-    // Increase the score when prawn is clicked
+    // Increase the score when prawn is clicked; make next prawn appear quicker
     prawn.addEventListener("click", function(){
         console.log("Prawn whacked!");
         ++score;
@@ -86,6 +86,9 @@ function displayPrawns () {
         imageClicked = true;
         whackSound.play();
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
+        clearInterval(prawnInterval);
+        interval = Math.max(1500 - (score * 50),700);
+        prawnInterval = setInterval(displayPrawns, interval);
     });
 
     // Revert the random div to an empty hole and increment 'prawns missed' if prawn not clicked
@@ -99,7 +102,7 @@ function displayPrawns () {
         }, 1000);
     
     // Display a modal once 5 prawns are missed
-      if (missed >= 5) {
+      if (missed >= 10) {
         document.body.style.backgroundImage = "url('./assets/images/background-lose.png')";
         let losePopup = document.getElementById("lose-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
@@ -111,7 +114,7 @@ function displayPrawns () {
       }
     
       // Display a modal once 10 prawns are hit
-      if (score >= 10) {
+      if (score >= 30) {
         let winPopup = document.getElementById("win-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
         document.getElementById("start-game").innerText = "start game";
@@ -136,6 +139,7 @@ function resetGame() {
     clearInterval(prawnInterval);
     score = 0;
     missed = 0;
+    interval = 1500;
     document.getElementById("score").innerText = "0";
     document.getElementById("missed").innerText = "0";
     document.querySelectorAll('.mole-area').innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;

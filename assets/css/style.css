@@ -181,11 +181,12 @@ header {
  footer {
     width: 100%;
     background-color: #ffffff;
-    padding: 1rem 0 2rem 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 8vh;
+    position: absolute;
+    bottom: 0;
  }
 
  #social-icons {
@@ -291,7 +292,7 @@ header {
         margin-top: 2rem;
     }
     footer p {
-        font-size: 0.7rem;
+        font-size: 0.rem;
         padding: 0.2rem;
         text-align: left;
         padding-left: 2rem;
@@ -317,7 +318,7 @@ header {
         display: block;
     }
     footer p {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
         padding: 0.2rem;
         text-align: center;
     }
