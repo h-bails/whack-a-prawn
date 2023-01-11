@@ -358,3 +358,9 @@ header {
         width: 6rem;
     }
 }
+
+@media screen and (min-width:1500px) {
+    .mole-area img {
+        width: 9rem;
+    }
+}
