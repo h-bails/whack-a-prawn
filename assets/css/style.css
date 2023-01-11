@@ -311,8 +311,9 @@ header {
     }
 
     .nav-links li {
-        padding-right: 1.5rem;
-        font-size: 1.2rem;
+        padding-right: 1rem;
+        font-size: 1.1rem;
+        margin-left: 0.8rem;
     }
     .col {
         padding-left: 0.8rem;
@@ -330,7 +331,9 @@ header {
         font-size: 1.2rem;
     }
     .popup {
-        
+        width: 85%;
+        font-size: 0.9rem;
+        margin: 0;
     }
 }
 

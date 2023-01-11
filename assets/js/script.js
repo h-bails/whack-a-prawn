@@ -105,7 +105,7 @@ function displayPrawns () {
             }
         }, 1000);
     
-    // Display a modal once 5 prawns are missed
+    // Display a modal once 10 prawns are missed
       if (missed >= 10) {
         document.body.style.backgroundImage = "url('./assets/images/background-lose.png')";
         let losePopup = document.getElementById("lose-popup");
@@ -117,7 +117,7 @@ function displayPrawns () {
         laughSound.play();
       }
     
-      // Display a modal once 10 prawns are hit
+      // Display a modal once 30 prawns are hit
       if (score >= 30) {
         let winPopup = document.getElementById("win-popup");
         randomDiv.innerHTML = `<img src="./assets/images/empty-hole.png" alt="empty mole hole">`;
